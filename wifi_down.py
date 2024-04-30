@@ -18,9 +18,7 @@ def monitor_connection(n_pinged, address='8.8.8.8', retry_interval_sec=1, up_cha
         print(f'{char} {character_fill*down_character_}\r')
         return False, n_pinged+1
     else:
-        print(type(out))
-        # latency = out.poll().split('time')[1]
-        print(f'{latency}{char} {character_fill*up_character_}\r')
+        print(f'{char} {character_fill*up_character_}\r')
         return True, n_pinged+1
 
 
